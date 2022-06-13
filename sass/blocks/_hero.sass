@@ -2,19 +2,94 @@
   padding-top: 80px
   &-wrap
     display: flex
-    padding: 190px 0 190px
-    background: #f1f1f1 url('../img/hero/hero-bg.jpg') no-repeat center right -220px
-  // background-size: cover
-  &__title
-    margin-bottom: 40px
-    font-size: 36px
-    +bold
-    &-block
-      text-align: right
-      margin-left: 113px
-      max-width: 330px
+    height: 580px
+    background: #f1f1f1
+  &__menu-button
+    padding: 0
+    padding-top: 10px
+    border-right: none
+    display: none // mobile => flex
+    justify-content: space-around
+    align-items: center
+    background-color: white
+    height: 100px
+    width: 55px
+    &>.menu-button__line
+      width: 70%
+      height: 2px
+  &__block
+    padding: 0 32px
+    width: 33%
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: start
+
+  &__img-wrap
+    width: 1000px
+    max-width: 67%
+    height: 100%
+    display: flex
+  &__img
+    background: #f1f1f1 url('../img/hero/hero-bg.jpg') no-repeat center left
+  &__button
+    width: 90%
+    padding: 20px 0
+    margin-bottom: 30px
   &__subtitle
     display: block
     font-size: 22px
-    margin-bottom: 67px
+    margin-bottom: 45px
+    text-align: center
     +bold
+  &__title
+    margin-top: 70px
+    margin-bottom: 30px
+    font-size: 36px
+    max-width: 330px
+    text-align: left
+    +bold
+
+@media (max-width: 1369px)
+  .hero
+    &__title
+      max-width: 300px
+      font-size: 32px
+
+@media (max-width: 1199px)
+  .hero
+    &__title
+      font-size: 28px
+
+@media (max-width: 991px)
+  .hero
+    &__subtitle
+      font-size: 19px
+      text-align: left
+
+@media (max-width: 768px)
+  .hero
+    &-wrap
+      flex-direction: column
+    &__block
+      width: 100%
+    &__button
+      width: 50%
+      min-width: 180px
+    &__title
+      max-width: 100%
+      font-size: 23px
+    &__subtitle
+      font-size: 16px
+    &__img-wrap
+      padding: 0 32px
+      max-width: 100%
+//mobile
+@media (max-width: 569px)
+  .hero
+    &__menu-button
+      display: flex
+    &__block
+      padding: 0
+    &__img-wrap
+      padding: 0

@@ -1,6 +1,9 @@
 body
   +light
   color: $text-color
+.img
+  width: 100%
+  height: 100%
 .button-o
   border: 2px solid $primary
   padding: 17px 22px
@@ -17,3 +20,14 @@ body
   background: $primary
   color: #fff
   +bold
+
+@media (max-width: 991px)
+  .button
+    font-size: 14px
+    padding: 20px 30px
+
+@media (max-width: 768px)
+  .button-o
+    text-align: start
+    padding: 10px 10px
+    font-size: 12px

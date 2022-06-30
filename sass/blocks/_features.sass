@@ -1,0 +1,22 @@
+.features
+  &__card
+    flex-basis: 33%
+    text-align: start
+    margin-bottom: 110px
+  &__image
+    width: 90px
+  &-wrap
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+@media (max-width: 768px)
+  .features
+    &__card
+      flex-basis: 50%
+      margin-bottom: 55px
+
+@media (max-width: 569px)
+  .features
+    &__card
+      flex-basis: 100%

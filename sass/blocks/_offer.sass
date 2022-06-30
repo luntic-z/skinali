@@ -1,0 +1,55 @@
+.offer
+  padding-top: 129px
+  &__bg-image
+    height: 150%
+    position: absolute
+    top: -200px
+    right: 370px
+    z-index: 0
+    -webkit-mask: linear-gradient(83deg, rgba(0,0,0,0) 78%, 78.55%, rgba(0,0,0,1))
+  &__wrap
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+  &__block
+    position: relative
+    width: calc(100% + 80px) //desktop
+    padding: 80px 407px 80px 80px
+    left: -80px
+    top: -80px // padding = -left/-top
+    background-color: #fff
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1)
+    overflow: hidden
+  &__title
+    font-size: 25px
+    margin-bottom: 21px
+    margin-top: 0
+  &__subtitle
+    display: block
+    margin-bottom: 30px
+    font-size: 19px
+
+@media (max-width: 1369px)
+  .offer
+    &__block
+      left: 0
+      margin: 0 auto
+      width: 77%
+
+@media (max-width: 1199px)
+  .offer
+    &__block
+      width: 100%
+      box-sizing: border-box
+
+@media (max-width: 768px)
+  .offer
+    &__block
+      padding: 40px
+      background-image: none
+  .form
+    &__row
+      flex-direction: column
+      &_checkbox
+        flex-direction: row

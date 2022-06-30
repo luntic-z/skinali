@@ -8,11 +8,12 @@
   <title>Skinali</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/normalize.css">
+  <script src="js/script.js"></script>
 </head>
 
 <body>
   <header class="header">
-    <div class="menu">
+    <div class="menu ">
       <div class="container">
         <div class="menu-wrap">
           <nav class="menu__nav">
@@ -31,22 +32,24 @@
     <div class="navbar">
       <div class="container">
         <div class="navbar-wrap">
-          <button class="menu-button navbar__menu-button">
-            <span class="menu-button__line"></span>
-            <span class="menu-button__line"></span>
-            <span class="menu-button__line"></span>
-          </button>
-          <div class="logo navbar__logo">
-            <strong class="logo__text">Фабрика Скинали №1</strong>
-            <span class="logo__description">Ведущий производитель скинали</span>
-          </div>
-          <div class="navbar__mobile">
-            <a class="navbar__phone" href="tel:+79121234567">+7 912 123-45-67</a>
-            <span class="navbar__work-time navbar__small-text">без выходных 9-21</span>
-          </div>
-          <div class="navbar__landline">
-            <a class="navbar__phone" href="tel:+79121234567">+7 912 123-45-67</a>
-            <a class="navbar__email navbar__small-text" href="mailto:info@mail.cu">info@mail.cu</a>
+          <div class="navbar-left">
+            <button class="menu-button navbar__menu-button">
+              <span class="menu-button__line"></span>
+              <span class="menu-button__line"></span>
+              <span class="menu-button__line"></span>
+            </button>
+            <div class="logo navbar__logo navbar-left__item">
+              <strong class="logo__text">Фабрика Скинали №1</strong>
+              <span class="logo__description">Ведущий производитель скинали</span>
+            </div>
+            <div class="navbar__mobile navbar-left__item">
+              <a class="navbar__phone" href="tel:+79121234567">+7 912 123-45-67</a>
+              <span class="navbar__work-time navbar__small-text">без выходных 9-21</span>
+            </div>
+            <div class="navbar__landline navbar-left__item">
+              <a class="navbar__phone" href="tel:+79121234567">+7 912 123-45-67</a>
+              <a class="navbar__email navbar__small-text" href="mailto:info@mail.cu">info@mail.cu</a>
+            </div>
           </div>
           <button class="button-o navbar__button">Получить консультацию</button>
         </div>
@@ -71,17 +74,110 @@
                 от 3 000 р/м2
               </span>
             </div>
-            <button class="button hero__button">Заказать скинали</button>
+            <button class="button hero__button button_flex">Заказать скинали</button>
           </div>
-          <div class="img-wrap hero__img-wrap">
-            <div class="img hero__img"></div>
+          <div class="image-wrap hero__image-wrap">
+            <div class="image hero__image"></div>
           </div>
         </div>
       </div>
+      <!-- /.container -->
     </div>
     <!-- /.hero -->
   </header>
   <!-- /.header -->
+  <form action="#" class="offer section form offer__form bg-secondary">
+    <div class="container">
+      <div class="offer__block">
+        <img class="offer__bg-image" src="img/offer/offer-bg.jpg" alt="">
+        <div class="offer__wrap">
+          <h2 class="section-title offer__title">Оставьте заявку на расчет</h2>
+          <span class="offer__subtitle">и получите 30% скидку на изготовление скинали или фартука для кухни</span>
+          <div class="form__row">
+            <div class="form__group">
+              <label for="" class="form__label">Вид стекла</label>
+              <!-- /.form__label -->
+              <input type="text" class="input form__input">
+            </div>
+            <!-- /.form__group -->
+            <div class="form__group">
+              <label for="" class="form__label">Ширина, см</label>
+              <!-- /.form__label -->
+              <input type="text" class="input form__input">
+            </div>
+            <!-- /.form__group -->
+            <div class="form__group">
+              <label for="" class="form__label">Высота, см</label>
+              <!-- /.form__label -->
+              <input type="text" class="input form__input">
+            </div>
+            <!-- /.form__group -->
+          </div>
+          <!-- /.form__row -->
+          <div class="form__row form__row_checkbox">
+            <div class="form__group form__checkbox">
+              <input type="checkbox" class="checkbox" id="install">
+              <label for="install" class="checkbox__label">Монтаж</label>
+            </div>
+            <!-- /.form__group -->
+            <div class="form__group form__checkbox">
+              <input type="checkbox" class="checkbox" id="delivery">
+              <label for="delivery" class="checkbox__label">Доставка</label>
+            </div>
+            <!-- /.form__group -->
+          </div>
+          <!-- /.form__row -->
+          <div class="form__row">
+            <div class="form__name form__group">
+              <input type="text" placeholder="Ваше имя" class="input form__input">
+            </div>
+            <div class="form__tel form__group">
+              <input type="tel" placeholder="Ваш телефон" class="input form__input">
+            </div>
+            <button type="submit" class="button form__submit form__group button_flex">Получить скидку</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
+  </form>
+  <!-- /.offer -->
+  <section class="features section">
+    <div class="container">
+      <h2 class="section-title section__title">Наши приемущества</h2>
+      <div class="features-wrap">
+        <div class="features__card">
+          <img src="img/features/feature-1.png" alt="Бесплатный дизайн-макет" class="features__image">
+          <p class="features__text">Бесплатный <br> дизайн-макет</p>
+        </div>
+        <div class="features__card">
+          <img src="img/features/feature-2.png" alt="Пожизненная гарантия" class="features__image">
+          <p class="features__text">Пожизненная <br> гарантия</p>
+        </div>
+        <div class="features__card">
+          <img src="img/features/feature-3.png" alt="Большой каталог изображений" class="features__image">
+          <p class="features__text">Большой каталог <br> изображений</p>
+        </div>
+        <div class="features__card">
+          <img src="img/features/feature-4.png" alt="100% соблюдение сроков" class="features__image">
+          <p class="features__text">100% соблюдение <br> сроков</p>
+        </div>
+        <div class="features__card">
+          <img src="img/features/feature-5.png" alt="Собственное производство" class="features__image">
+          <p class="features__text">Собственное <br> производство</p>
+        </div>
+        <div class="features__card">
+          <img src="img/features/feature-6.png" alt="Минимальная цена в городе от 1600 р/метр" class="features__image">
+          <p class="features__text">Минимальная цена в городе <br> от 1600 р/метр</p>
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.features section -->
+
+  <!-- Подключение виджета Spikmi -->
+  <script type="text/javascript" src="https://spikmi.org/Widget?Id=11613"></script>
 </body>
 
 </html>

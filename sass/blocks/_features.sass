@@ -1,20 +1,29 @@
 .features
   &__card
+    display: flex
+    align-items: start
     flex-basis: 33%
-    text-align: start
-    margin-bottom: 110px
+    margin-bottom: 52px
+  &__text
+    margin: 0
+    margin-left: 15px
+    +reg
   &__image
     width: 90px
   &-wrap
     display: flex
     justify-content: space-between
     flex-wrap: wrap
+    width: 80%
 
 @media (max-width: 768px)
   .features
+    &__title
+      padding-left: 40px
     &__card
+      padding-left: 40px
       flex-basis: 50%
-      margin-bottom: 55px
+      margin-bottom: 35px
 
 @media (max-width: 569px)
   .features

@@ -5,8 +5,8 @@
 
 .container {
   max-width: 1487px;
-  width: 70%;
   margin-left: 19.55%;
+  width: 70%;
 }
 
 @media (max-width: 1369px) {
@@ -91,12 +91,12 @@ body {
 }
 
 .button-o {
-  border: 2px solid #507fe1;
+  border: 2px solid #2457c0;
   padding: 17px 22px;
   font-size: 16px;
   text-transform: uppercase;
   background-color: transparent;
-  color: #507fe1;
+  color: #2457c0;
   cursor: pointer;
   font-family: 'Proxima Nova Regular', sans-serif;
 }
@@ -106,7 +106,7 @@ body {
   font-size: 16px;
   text-transform: uppercase;
   padding: 25px 45px;
-  background: #507fe1;
+  background: #2457c0;
   color: #fff;
   cursor: pointer;
   font-family: 'Proxima Nova Semibold', sans-serif;
@@ -205,7 +205,7 @@ body {
     font-size: 20px;
   }
   .section__title {
-    margin-bottom: 50px;
+    margin-bottom: 55px;
   }
   .button-o {
     text-align: start;
@@ -219,7 +219,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
   border-bottom: 1px solid #000;
   z-index: 10;
 }
@@ -319,12 +319,14 @@ body {
   top: 0px;
   -webkit-transition: .4s;
   transition: .4s;
-  background-color: #507fe1;
+  background-color: #2457c0;
+  opacity: 0;
   z-index: 1;
 }
 
 .menu_active {
   top: 80px;
+  opacity: 1;
 }
 
 .menu__link {
@@ -553,9 +555,9 @@ body {
   height: 150%;
   position: absolute;
   top: -200px;
-  right: 370px;
+  right: 0;
   z-index: 0;
-  -webkit-mask: linear-gradient(83deg, rgba(0, 0, 0, 0) 78%, 78.55%, black);
+  -webkit-mask: linear-gradient(83deg, rgba(0, 0, 0, 0) 50%, 50.55%, black);
 }
 
 .offer__wrap {
@@ -575,7 +577,7 @@ body {
 .offer__block {
   position: relative;
   width: calc(100% + 80px);
-  padding: 80px 407px 80px 80px;
+  padding: 80px 32% 80px 80px;
   left: -80px;
   top: -80px;
   background-color: #fff;
@@ -596,26 +598,62 @@ body {
   font-size: 19px;
 }
 
+@media (max-width: 1800px) {
+  .offer__bg-image {
+    right: 0px;
+  }
+}
+
+@media (max-width: 1660px) {
+  .offer__block {
+    padding-right: 230px;
+  }
+}
+
 @media (max-width: 1369px) {
   .offer__block {
-    left: 0;
-    margin: 0 auto;
-    width: 77%;
+    padding: 70px;
+    width: calc(100% + 70px);
+    left: -70px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background-color: #f1f1f1;
   }
 }
 
 @media (max-width: 1199px) {
   .offer__block {
-    width: 100%;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+  }
+  .offer__bg-image {
+    right: 0;
+    -webkit-mask: linear-gradient(83deg, rgba(0, 0, 0, 0) 70%, 70.55%, black);
+  }
+}
+
+@media (max-width: 991px) {
+  .offer__bg-image {
+    -webkit-mask: linear-gradient(83deg, rgba(0, 0, 0, 0) 76%, 76.55%, black);
   }
 }
 
 @media (max-width: 768px) {
   .offer__block {
+    width: 100%;
     padding: 40px;
+    left: 0;
     background-image: none;
+  }
+  .offer__subtitle {
+    max-width: 75%;
+  }
+  .offer__bg-image {
+    -webkit-mask: linear-gradient(87deg, rgba(0, 0, 0, 0) 87%, 87.55%, black);
+  }
+  .form__group {
+    max-width: 90%;
+    margin-bottom: 20px;
   }
   .form__row {
     -webkit-box-orient: vertical;
@@ -631,11 +669,28 @@ body {
   }
 }
 
+@media (max-width: 488px) {
+  .offer__bg-image {
+    display: none;
+  }
+}
+
 .features__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   -ms-flex-preferred-size: 33%;
       flex-basis: 33%;
-  text-align: start;
-  margin-bottom: 110px;
+  margin-bottom: 52px;
+}
+
+.features__text {
+  margin: 0;
+  margin-left: 15px;
+  font-family: 'Proxima Nova Regular', sans-serif;
 }
 
 .features__image {
@@ -651,13 +706,18 @@ body {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  width: 80%;
 }
 
 @media (max-width: 768px) {
+  .features__title {
+    padding-left: 40px;
+  }
   .features__card {
+    padding-left: 40px;
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
-    margin-bottom: 55px;
+    margin-bottom: 35px;
   }
 }
 

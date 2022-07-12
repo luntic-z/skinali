@@ -1,6 +1,6 @@
 <section class="section before-a">
   <div class="container">
-    <div class="section-title section__title">До</div>
+    <h2 class="section-title section__title">До</h2>
 
   </div>
 </section>

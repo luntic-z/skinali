@@ -20,6 +20,10 @@
 
   <?php include_once('blocks/before/before-after.php'); ?>
 
+  <?php include_once('blocks/gallery/gallery.php'); ?>
+
+  <?php include_once('blocks/info/info.php'); ?>
+
   <!-- Подключение виджета Spikmi -->
   <!-- <script type="text/javascript" src="https://spikmi.org/Widget?Id=11613"></script> -->
 </body>

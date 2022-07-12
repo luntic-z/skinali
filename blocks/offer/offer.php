@@ -3,7 +3,7 @@
     <div class="offer__block">
       <img class="offer__bg-image" src="img/offer/offer-bg.jpg" alt="">
       <div class="offer__wrap">
-        <h2 class="section-title offer__title">Оставьте заявку на расчет</h2>
+        <h2 class="section-title section__title offer__title">Оставьте заявку на расчет</h2>
         <span class="offer__subtitle">и получите 30% скидку на изготовление скинали или фартука для кухни</span>
         <div class="form__row">
           <div class="form__group">

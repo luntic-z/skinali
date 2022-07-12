@@ -23,7 +23,6 @@
     overflow: hidden
   &__title
     font-size: 25px
-    margin-bottom: 21px
     margin-top: 0
   &__subtitle
     display: block
@@ -43,6 +42,7 @@
   .offer
     &__block
       padding: 70px
+      padding-right: 20%
       width: calc(100% + 70px) //desktop
       left: -70px
       box-shadow: none
@@ -58,6 +58,8 @@
 
 @media (max-width: 991px)
   .offer
+    &__block
+      padding-right: 70px
     &__bg-image
       -webkit-mask: linear-gradient(83deg, rgba(0,0,0,0) 76%, 76.55%, rgba(0,0,0,1))
 

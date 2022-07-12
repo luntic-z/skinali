@@ -1,0 +1,50 @@
+.gallery
+  &__block
+    display: flex
+    flex-wrap: wrap
+  &__card
+    position: relative
+    height: 200px
+    display: flex
+    justify-content: end
+    align-items: end
+    flex-basis: 50%
+    box-shadow: 7px 5px 21px rgba(0, 0, 0, .1)
+    &::nth-child(odd)
+      margin-right: 10px
+  &__button
+    padding: 0 20px
+    height: 38px
+    margin-left: 1px
+    // border-radius: 7px с закруглениями
+    opacity: .8
+  &-label
+    border: none
+    font-size: 16px
+    padding: 5px 10px
+    background: #2457c096
+    color: #fff
+    +reg
+    opacity: .8
+  &__label
+    position: absolute
+    top: 0
+    left: 0
+    margin: 10px
+  &__try-on
+    background-color: #d4d6da
+    color: darken($primary, 10%)
+  &__se-all-button
+    margin-top: 55px
+    margin-bottom: 28px
+  &__se-all-descr
+    display: block
+    text-align: center
+
+@media (max-width: 768px)
+  .gallery
+    &__card
+      height: 130px
+      flex-basis: 100%
+      background-size: cover
+      background-position: 0 center

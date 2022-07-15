@@ -14,18 +14,23 @@
 <body>
   <?php include_once('blocks/header/header.php'); ?>
   
-  <?php include_once('blocks/offer/offer.php'); ?>
+  <?php include_once('blocks/offer/offer.html'); ?>
 
-  <?php include_once('blocks/features/features.php'); ?>
+  <?php include_once('blocks/features/features.html'); ?>
 
-  <?php include_once('blocks/before/before-after.php'); ?>
+  <?php include_once('blocks/before/before-after.html'); ?>
 
-  <?php include_once('blocks/gallery/gallery.php'); ?>
+  <?php include_once('blocks/gallery/gallery.html'); ?>
 
-  <?php include_once('blocks/info/info.php'); ?>
+  <?php include_once('blocks/info/info.html'); ?>
 
-  <?php include_once('blocks/price/price.php'); ?>
+  <?php include_once('blocks/price/price.html'); ?>
 
+  <?php include_once('blocks/reviews/reviews.html'); ?>
+  
+  <?php include_once('blocks/offer/offer-sec.html'); ?>
+  
+  <?php include_once('blocks/footer/footer.html'); ?>
   <!-- Подключение виджета Spikmi -->
   <!-- <script type="text/javascript" src="https://spikmi.org/Widget?Id=11613"></script> -->
 </body>

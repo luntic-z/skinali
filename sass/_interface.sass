@@ -4,15 +4,14 @@ body
 .bg-secondary
   background-color: $bg-secondary
 .section
-  padding-top: 100px
+  padding: 75px 0
   &-title
     font-size: 24px
     +light
     text-align: left
-    // text-transform: uppercase old
   &__title
-    // margin-bottom: 100px old
-    margin-bottom: 75px //new
+    margin-bottom: 75px
+    margin-top: 0
 
 a
   text-decoration: none
@@ -62,8 +61,9 @@ a
   &-item
     flex-basis: 24%
     box-shadow: 4px 5px 30px rgba($primary, .36)
-  &__item
     text-align: center
+    background-color: #fff
+  &__item
     margin-bottom: 20px
     padding-bottom: 5px
   &__img-preview
@@ -128,7 +128,7 @@ a
     &-item
       flex-basis: 45%
     &__item:nth-child(odd)
-      margin-right: 10px
+      margin-right: 20px
     &__img-preview
       height: 180px
 
@@ -138,13 +138,18 @@ a
     &-title
       font-size: 20px
     &__title
-      // margin-bottom: 55px old
-      margin-bottom: 20px // new
+      margin-bottom: 50px
   .button-o
     text-align: start
     padding: 10px 10px
     font-size: 12px
-  .wrap-list
-    &-item
-      flex-basis: 100%
-      max-width: 360px
+  .form
+    &__group
+      max-width: 90%
+      margin-bottom: 20px
+    &__group:not(:last-child) > &__input
+      border-right: 1px solid #ddd
+    &__row
+      flex-direction: column
+      &_checkbox
+        flex-direction: row

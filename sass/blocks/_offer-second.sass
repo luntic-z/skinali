@@ -2,7 +2,10 @@
   &-title
     text-transform: uppercase
   &__block
-    background-image: url('../img/offer/offer-second-bg.png')
+    @include offerBlock(60px, 32%, #fff, 'offer-second-bg')
+    width: calc(100% + 60px)
+  &__button
+    font-size: 14px
   &__policy
     position: absolute
     display: flex
@@ -12,3 +15,31 @@
     align-items: center
     &-group
       position: relative
+
+@media (max-width: 1369px)
+  .offer-second
+    &__button
+      font-size: 12px
+
+@media (max-width: 991px)
+  .offer-second
+    &__block
+      background-position-x: 120%
+    &__row
+      flex-wrap: wrap
+    &__group
+      margin-bottom: 3px
+    &__policy
+      position: relative
+      width: 100%
+      padding: 0
+      &-group
+        margin-top: 25px
+
+@media (max-width: 768px)
+  .offer-second
+    &__block
+      width: 100%
+      padding: 40px
+      left: 0
+      background-image: none

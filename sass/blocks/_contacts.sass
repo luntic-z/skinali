@@ -1,0 +1,21 @@
+.contacts
+  &-title
+    text-transform: uppercase
+  &__block
+    width: 80%
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+  &__item
+    &:not(:last-child)
+      margin: 0 30px 40px 0
+  &__icon
+    height: 32px
+    margin-bottom: 25px
+  &__info
+    display: block
+
+@media (max-width: 768px)
+  .contacts
+    &__icon
+      margin-bottom: 12px

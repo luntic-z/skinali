@@ -32,7 +32,7 @@
 @media (max-width: 768px) {
   .container {
     max-width: 100%;
-    padding: 0 30px;
+    padding: 0 70px;
   }
 }
 
@@ -282,7 +282,7 @@ a {
 
 @media (max-width: 768px) {
   .section {
-    padding-top: 50px;
+    padding: 50px 0;
   }
   .section-title {
     font-size: 20px;
@@ -313,6 +313,10 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  .wrap-list-item {
+    -ms-flex-preferred-size: 47%;
+        flex-basis: 47%;
   }
 }
 
@@ -603,7 +607,7 @@ a {
     display: none;
   }
   .hero__block {
-    padding: 0 40px;
+    padding-top: 0;
     width: 100%;
   }
   .hero__button {
@@ -731,9 +735,11 @@ a {
 
 @media (max-width: 768px) {
   .offer__block {
+    padding: 40px 40px 40px 40px;
+    left: -40px;
+    background-color: #fff;
+    background-image: url("../img/offer/offer-bg.png");
     width: 100%;
-    padding: 40px;
-    left: 0;
     background-image: none;
   }
   .offer__subtitle {
@@ -776,11 +782,7 @@ a {
 }
 
 @media (max-width: 768px) {
-  .features__title {
-    padding-left: 40px;
-  }
   .features__card {
-    padding-left: 40px;
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     margin-bottom: 35px;
@@ -1032,10 +1034,47 @@ a {
 
 @media (max-width: 768px) {
   .offer-second__block {
+    padding: 40px 40px 40px 40px;
+    left: -40px;
+    background-color: #fff;
+    background-image: url("../img/offer/offer-bg.png");
     width: 100%;
-    padding: 40px;
-    left: 0;
     background-image: none;
+  }
+}
+
+.contacts-title {
+  text-transform: uppercase;
+}
+
+.contacts__block {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contacts__item:not(:last-child) {
+  margin: 0 30px 40px 0;
+}
+
+.contacts__icon {
+  height: 32px;
+  margin-bottom: 25px;
+}
+
+.contacts__info {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .contacts__icon {
+    margin-bottom: 12px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -30,7 +30,7 @@
   
   <?php include_once('blocks/offer/offer-sec.html'); ?>
   
-  <?php include_once('blocks/footer/footer.html'); ?>
+  <?php include_once('blocks/footer/footer.php'); ?>
   <!-- Подключение виджета Spikmi -->
   <!-- <script type="text/javascript" src="https://spikmi.org/Widget?Id=11613"></script> -->
 </body>

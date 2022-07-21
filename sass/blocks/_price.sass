@@ -2,3 +2,16 @@
   &__card
     overflow: hidden
     border-radius: 0 0 7px 7px
+    box-shadow: 4px 5px 30px rgba(0, 59, 181, 0.13)
+    cursor: pointer
+  &__name
+    &-wrap
+      display: flex
+      padding: 20px 35px
+      justify-content: space-between
+      border-radius: 0 0 10px 10px
+      background-color: $nearwhite
+      border: 1px solid #000
+  &__price-tag
+    color: lighten($primary, 15%)
+    +bold

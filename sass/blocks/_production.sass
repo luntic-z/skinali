@@ -1,0 +1,26 @@
+.production
+  &__wrap
+    overflow: hidden
+  &__text
+    display: block
+    margin: 0
+    font-size: 18px
+  &__title
+    // display: inline-block
+    &::after
+
+  &-image
+    width: 500px
+    max-width: 60%
+  &__image
+    float: left
+    margin: 0 20px 20px 0
+
+@media (max-width: 768px)
+  .production
+    &-image
+      max-width: 100%
+    &__image
+      margin: 0 auto 40px auto
+    &__text > p
+      clear: left

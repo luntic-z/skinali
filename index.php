@@ -8,7 +8,8 @@
   <title>Skinali</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/normalize.css">
-  <script src="js/script.js"></script>
+  <script src="js/script.js" defer></script>
+  <script src="js/person.js" defer></script>
 </head>
 
 <body>
@@ -28,7 +29,9 @@
 
   <?php include_once('blocks/reviews/reviews.html'); ?>
   
-  <?php include_once('blocks/offer/offer-sec.html'); ?>
+  <?php include_once('blocks/production/production.html'); ?>
+  
+  <?php include_once('blocks/offer/offer-price.html'); ?>
   
   <?php include_once('blocks/footer/footer.php'); ?>
   <!-- Подключение виджета Spikmi -->

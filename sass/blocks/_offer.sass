@@ -1,12 +1,10 @@
 @mixin offerBlock($padding, $p-right: $padding, $color: #fff, $img: 'offer-bg')
-  // width: calc(100% + $padding)
   padding: $padding $p-right $padding $padding
   left: - $padding
   background-color: $color
   background-image: url('../img/offer/' + $img + '.png')
 
 .offer
-  padding-top: 100px
   &-block
     position: relative
     display: flex

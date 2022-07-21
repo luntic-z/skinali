@@ -1,4 +1,4 @@
-<div class="hero">
+<section class="section hero">
   <div class="container">
     <div class="hero-wrap">
       <button class="menu-button hero__menu-button">
@@ -8,7 +8,7 @@
       </button>
       <div class="hero__block">
         <div class="hero__title-wrap">
-          <div class="hero__title">
+          <div class="section-title section__title hero__title">
             Гарантия минимальной цены на скинали
           </div>
           <span class="hero__subtitle">
@@ -22,4 +22,4 @@
       </div>
     </div>
   </div>
-</div>
+</section>

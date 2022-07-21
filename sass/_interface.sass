@@ -18,9 +18,6 @@ a
   color: #000
 .link
   color: #565656
-.image
-  width: 100%
-  height: 100%
 .button-o
   border: 1px solid $primary
   padding: 17px 22px
@@ -45,9 +42,10 @@ a
     justify-content: center
     align-items: center
   &-like
-    background: url('../img/interface/like.png') $primary no-repeat center center
-    width: 25px
+    background: url('../img/interface/like.svg') $primary no-repeat center center
+    width: 15px
     box-sizing: content-box
+    background-size: 19px
   &-centered
     display: inline-block
     position: relative
@@ -63,14 +61,12 @@ a
     box-shadow: 4px 5px 30px rgba($primary, .36)
     text-align: center
     background-color: #fff
-  &__item
-    margin-bottom: 20px
-    padding-bottom: 5px
-  &__img-preview
+  &-img
     height: 200px
-    margin-bottom: 20px
     background-size: cover
     background-position: center
+  &__item
+    margin-bottom: 20px
   &__name
     +reg
 

@@ -1,9 +1,10 @@
 .hero
   &-wrap
     display: flex
+    flex-wrap: wrap-reverse
     position: relative
     height: 580px
-    background: $bg-secondary
+    background: $bg-elements
   &__menu-button
     padding: 0
     padding-top: 10px
@@ -18,16 +19,18 @@
       height: 1px
       background-color: #000
   &__block
-    width: 33%
+    flex-basis: 33%
     height: 100%
-    padding-top: 50px
+    padding: 50px 7px 0 70px
     display: flex
     flex-direction: column
     justify-content: center
+    position: relative
+    left: -70px
+    background-color: $bg-elements
 
   &__image-wrap
-    width: 1000px
-    max-width: 67%
+    flex-basis: 67%
     height: 100%
     display: flex
   &__image
@@ -37,10 +40,10 @@
   &__button
     width: 80%
     padding: 20px 0
+    margin-top: 12px
   &__subtitle
     display: block
     font-size: 28px
-    margin-bottom: 12px
     text-align: left
     +reg
     color: $primary
@@ -58,10 +61,31 @@
       max-width: 300px
       font-size: 32px
 
-@media (max-width: 1199px)
+@media (max-width: 1199px) //rebuild layout hero block
   .hero
+    &-wrap
+      height: auto
+      margin-top: 50px
+    &__block
+      padding: 70px 0 15px 0
+      margin: 0 auto
+      flex-basis: content
+      flex-direction: column
+    &__image-wrap
+      height: 250px
+      flex-basis: 100%
     &__title
+      max-width: 100%
       font-size: 28px
+    &__subtitle
+      font-size: 24px
+      display: flex
+      align-items: center
+      justify-content: center
+    &__button
+      width: 290px
+      margin: 0 0 0 20px
+      display: inline-flex
 
 @media (max-width: 991px)
   .hero

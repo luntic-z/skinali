@@ -4,14 +4,33 @@
     border-radius: 0 0 7px 7px
     box-shadow: 4px 5px 30px rgba(0, 59, 181, 0.13)
     cursor: pointer
-  &__name
-    &-wrap
-      display: flex
-      padding: 20px 35px
-      justify-content: space-between
-      border-radius: 0 0 10px 10px
-      background-color: $nearwhite
-      border: 1px solid #000
+  &__name-block
+    padding: 13px 35px
+    border-radius: 0 0 10px 10px
+    background-color: $nearwhite
+  &__wrap
+    &::after
+      content: ''
+      flex-basis: 33%
+  &-wrap
+    display: flex
+    align-items: center
+    justify-content: space-between
+    position: relative
+  &__card:hover &-wrap::after
+    content: ''
+    display: inline-block
+    position: absolute
+    width: 25px
+    height: 7px
+    background-image: url('../img/price/arrow.svg')
+    right: 0
   &__price-tag
     color: lighten($primary, 15%)
     +bold
+    padding: 10px 13px
+    border-radius: 50px
+    background-color: $bg-secondary
+    transition: .4s ease-in-out
+  &__card:hover &__price-tag
+    transform: translateX(-50px)

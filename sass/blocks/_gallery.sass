@@ -12,21 +12,27 @@
       text-transform: none
       font-size: 18px
       border-radius: 3px
-  &__block
+  &-block
     display: flex
     flex-wrap: wrap
+    justify-content: space-between
+    &__item
+      flex-basis: 48.3%
+      margin: 0 15px 15px 0
+      &::nth-child(odd)
+        margin-right: 10px
+      &-r
+        display: flex
+        justify-content: end
   &__card
     position: relative
-    margin: 0 15px 15px 0
     height: 200px
     display: flex
     justify-content: end
     align-items: end
-    flex-basis: 47%
     box-shadow: 7px 5px 21px rgba(0, 0, 0, .1)
     border-radius: 3px
-    &::nth-child(odd)
-      margin-right: 10px
+    overflow-y: hidden
   &__button
     padding: 0 20px
     height: 38px
@@ -34,7 +40,12 @@
     font-size: 17.5px
     text-transform: none
     border-radius: 3px
-    // opacity: .8
+    transition: .2s
+    transform: translateY(100%)
+    opacity: 0
+  &__card:hover &__button
+    transform: translateY(0)
+    opacity: 1
   &-label
     padding: 5px 10px
     font-size: 16px
@@ -55,12 +66,14 @@
     background-color: $dark
   &__se-all-button
     margin: 0px 40px 0 10px
-    padding: 17px 25px
   &-se-all-button
     display: inline-block
+    padding: 17px 25px
     background-color: $dark
     text-transform: lowercase
     font-size: 18px
+  &-se-all-descr
+    text-align: left
   &__link
     margin-top: 45px
     display: flex
@@ -69,9 +82,24 @@
 .image-cover
   @include bgPos(cover, center, center)
 
+@media (max-width: 991px)
+  .gallery
+    &-block
+      &__item
+        flex-basis: 100%
+        margin: 0 0 30px 0
+        text-align: center
+        &-r
+          display: none
+        &:last-child
+          margin: 0
+    &__link
+      margin-top: 65px
+    &__card
+      height: 160px
+      @include bgPos(cover, 0, center)
 @media (max-width: 768px)
   .gallery
     &__card
       height: 130px
-      flex-basis: 100%
       @include bgPos(cover, 0, center)

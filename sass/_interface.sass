@@ -57,18 +57,28 @@ a
   flex-wrap: wrap
   justify-content: space-between
   &-item
-    flex-basis: 24%
-    box-shadow: 4px 5px 30px rgba($primary, .36)
+    flex-basis: 19.3%
+    box-shadow: 4px 5px 30px rgba($primary, .24)
     text-align: center
     background-color: #fff
+  &__item
+    margin-bottom: 10px
   &-img
-    height: 200px
+    height: 150px
     background-size: cover
     background-position: center
-  &__item
-    margin-bottom: 20px
   &__name
     +reg
+    &-wrap
+      padding: 20px
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+.wrap-list_large-items
+  &-item
+    flex-basis: 33%
+  &-img
+    height: 200px
 
 .form
   &__row
@@ -95,8 +105,19 @@ a
   width: 100%
   padding-left: 30px
   border: 1px solid #ddd
+  background-color: $bg-secondary
   &:focus
     outline: 0
+.select
+  appearance: none
+  background-image: url()
+  background-position: right .7em top 50%, 0 0
+  &::-ms-expand
+    display: none
+.option
+  height: 40px
+  border: 1px solid #ddd
+  background-color: $bg-secondary
 .checkbox
   display: none
   &__label
@@ -111,6 +132,7 @@ a
       width: 30px
       height: 30px
       border: 1px solid #ddd
+      background-color: $bg-secondary
   &:checked + &__label::before
     background-color: $strawberry
 
@@ -120,13 +142,16 @@ a
     padding: 20px 30px
 
   .wrap-list
-    justify-content: start
+    justify-content: space-between
     &-item
-      flex-basis: 45%
-    &__item:nth-child(odd)
-      margin-right: 20px
-    &__img-preview
-      height: 180px
+      min-width: 180px
+      flex-basis: 24%
+  .wrap-list_large-items
+    &-item
+      max-width: 600px
+      flex-basis: 100%
+    &__item:not(:last-child)
+      margin-bottom: 38px
 
 @media (max-width: 768px)
   .section
@@ -135,6 +160,17 @@ a
       font-size: 20px
     &__title
       margin-bottom: 50px
+  .wrap-list
+    &-item
+      flex-basis: 33%
+    &-img
+      height: 113px
+    &__name
+      &-wrap
+        padding: 13px
+  .wrap-list_large-items
+    &-item
+      flex-basis: 100%
   .button-o
     text-align: start
     padding: 10px 10px
@@ -149,5 +185,12 @@ a
       flex-direction: column
       &_checkbox
         flex-direction: row
-  .wrap-list-item
-    flex-basis: 47%
+
+@media (max-width: 480px)
+  .wrap-list
+    justify-content: space-around
+    &-item
+      flex-basis: 48%
+  .wrap-list_large-items
+    &-item
+      flex-basis: 100%

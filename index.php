@@ -19,23 +19,21 @@
 
   <?php include_once('blocks/features/features.html'); ?>
 
-  <?php include_once('blocks/before/before-after.html'); ?>
-
   <?php include_once('blocks/gallery/gallery.html'); ?>
-
-  <?php include_once('blocks/info/info.html'); ?>
 
   <?php include_once('blocks/price/price.html'); ?>
 
-  <?php include_once('blocks/reviews/reviews.html'); ?>
+  <!-- reviews -->
   
   <?php include_once('blocks/production/production.html'); ?>
+
+  <?php include_once('blocks/info/info.html'); ?>
   
   <?php include_once('blocks/offer/offer-price.html'); ?>
   
   <?php include_once('blocks/footer/footer.php'); ?>
   <!-- Подключение виджета Spikmi -->
-  <!-- <script type="text/javascript" src="https://spikmi.org/Widget?Id=11613"></script> -->
+  <script type="text/javascript" src="https://spikmi.org/Widget?Id=11613"></script>
 </body>
 
 </html>

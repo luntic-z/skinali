@@ -1,8 +1,13 @@
-@mixin offerBlock($padding, $p-right: $padding, $color: #fff, $img: 'offer-bg')
+@mixin offerBlock($padding, $p-right: $padding, $bg-color: #fff, $img: 'offer-bg')
   padding: $padding $p-right $padding $padding
   left: - $padding
-  background-color: $color
+  background-color: $bg-color
   background-image: url('../img/offer/' + $img + '.png')
+  @if $bg-color == $bg-secondary
+    .input
+      background-color: #fff
+    .checkbox__label:before
+      background-color: #fff
 
 .offer
   &-block
@@ -48,7 +53,6 @@
   .offer
     &__block
       @include offerBlock(40px)
-      width: 100%
       background-image: none
     &__subtitle
       max-width: 100%

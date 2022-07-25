@@ -1,12 +1,18 @@
 (function () {
-  const menuButton = document.querySelector('.menu-button')
+  const menuButtons = document.querySelectorAll('.menu-button')
   const menuWrap = document.querySelector('.menu')
   const classActive = 'menu_active'
-  menuButton.addEventListener('click', () => {
-    menuWrap.classList.toggle(classActive);
+  menuButtons.forEach((menuButton) => {
+    menuButton.addEventListener('click', () => {
+      console.log('toggle!')
+      menuWrap.classList.toggle(classActive);
+    })
   })
   window.addEventListener('click', (e) => {
-    if (!e.target.closest(".navbar") && !e.target.closest(".menu")) {
+    if (!e.target.closest(".navbar") &&
+      !e.target.closest(".menu") &&
+      !e.target.closest(".menu-button") &&
+      menuWrap.classList.contains(classActive)) {
       menuWrap.classList.toggle(classActive);
     }
   })

@@ -1,4 +1,5 @@
 .hero
+  padding-top: 80px
   &-wrap
     display: flex
     flex-wrap: wrap-reverse
@@ -7,12 +8,13 @@
     background: $bg-elements
   &__menu-button
     padding: 0
-    padding-top: 10px
-    display: none // mobile => flex
+    margin-top: 10px
+    height: 38px
+    width: 55px
+    display: none
     justify-content: space-around
     align-items: center
-    flex-basis: 60px
-    width: 55px
+    background-color: $bg-mobile
     border: none
     &>.menu-button__line
       width: 70%
@@ -71,6 +73,7 @@
       margin: 0 auto
       flex-basis: content
       flex-direction: column
+      left: 0
     &__image-wrap
       height: 250px
       flex-basis: 100%
@@ -81,7 +84,7 @@
       font-size: 24px
       display: flex
       align-items: center
-      justify-content: center
+      justify-content: end
     &__button
       width: 290px
       margin: 0 0 0 20px
@@ -89,47 +92,40 @@
 
 @media (max-width: 991px)
   .hero
+    &__title
+      font-size: 25px
     &__subtitle
       font-size: 19px
       text-align: left
 
 @media (max-width: 768px)
   .hero
-    &-wrap
-      flex-direction: column
-      &::before
-        display: none
     &__block
-      padding-top: 0
       width: 100%
     &__button
       width: 50%
       min-width: 180px
     &__title
-      max-width: 100%
+      text-transform: none
       font-size: 23px
     &__subtitle
       font-size: 16px
     &__image-wrap
       max-width: 100%
+    &__button
+      padding: 16px
 //mobile
 @media (max-width: 569px)
   .hero
     &-wrap
-      height: auto
-      padding-bottom: 47px
-    &__title
-      margin-top: 48px
-    &__button
-      width: 40%
+      background-color: $bg-mobile
     &__menu-button
       display: flex
       z-index: 1
     &__block
+      padding: 50px 0 0 0
       z-index: 1
     &__image-wrap
-      position: absolute
-      inset: 30px 0 0
-    &__image
-      background: #f1f1f1 url('../img/hero/hero-bg_569.jpg') no-repeat calc(50% + 123px) 46px
-      background-size: 150%
+      height: 100px
+    &__block
+      background: transparent

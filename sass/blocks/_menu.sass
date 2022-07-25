@@ -1,24 +1,30 @@
 .menu
   width: 100%
   position: fixed
-  top: 0px
-  transition: .4s
   background-color: $primary
+  transition: .4s
+  top: 80px
+  transform: translateY(-100%)
   opacity: 0
-  z-index: 1
+  z-index: -1
   &_active
-    top: 80px
+    transform: translateY(0)
     opacity: 1
+    z-index: 10
   &__link
+    padding: 16px 0
+    flex-grow: 1
+    text-align: center
     text-decoration: none
     font-size: 17px
     text-transform: uppercase
     color: #fff
+    transition: background-color .1s
+    &:hover
+      background-color: lighten($primary, 25%)
   &__nav
     display: flex
     justify-content: space-around
-    padding-top: 16px
-    padding-bottom: 16px
   &-button
     flex-direction: column
     align-items: center
@@ -37,3 +43,17 @@
       height: 2px
       background-color: #89a9eb
       margin: 4px 0
+
+@media (max-width: 1199px)
+  .menu
+    &__link
+      font-size: 14px
+
+@media (max-width: 991px)
+  .menu
+    &__nav
+      flex-direction: column
+      padding: 0
+    &__link
+      padding: 15px 0
+      text-align-last: left

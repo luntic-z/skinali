@@ -105,19 +105,20 @@ a
   width: 100%
   padding-left: 30px
   border: 1px solid #ddd
-  background-color: $bg-elements
+  background-color: lighten($bg-elements, 30%)
   &:focus
     outline: 0
 .select
   appearance: none
-  background-image: url()
-  background-position: right .7em top 50%, 0 0
+  background: url(../img/interface/arrow-dropdown.svg) no-repeat
+  background-position: right 15px top 59%, 0 0
+  background-size: 20px
   &::-ms-expand
     display: none
 .option
   height: 40px
   border: 1px solid #ddd
-  background-color: $bg-elements
+  background-color: lighten($bg-elements, 30%)
 .checkbox
   display: none
   &__label
@@ -132,7 +133,7 @@ a
       width: 30px
       height: 30px
       border: 1px solid #ddd
-      background-color: $bg-elements
+      background-color: lighten($bg-elements, 30%)
   &:checked + &__label::before
     background-color: $strawberry
 
@@ -172,8 +173,8 @@ a
     &-item
       flex-basis: 100%
   .button-o
-    text-align: start
-    padding: 10px 10px
+    padding: 16px 0
+    flex-grow: 1
     font-size: 12px
   .form
     &__group

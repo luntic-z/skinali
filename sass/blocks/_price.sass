@@ -1,12 +1,13 @@
 .price
   &__card
     overflow: hidden
-    border-radius: 0 0 7px 7px
+    // border-radius: 0 0 7px 7px
     box-shadow: 4px 5px 30px rgba(0, 59, 181, 0.13)
     cursor: pointer
+  &__title
+    margin-bottom: 20px
   &__name-block
     padding: 13px 35px
-    border-radius: 0 0 10px 10px
   &__wrap
     &::after
       content: ''
@@ -16,6 +17,7 @@
     align-items: center
     justify-content: space-between
     position: relative
+    flex-wrap: wrap
   &__card:hover &-wrap::after
     content: ''
     display: inline-block
@@ -33,3 +35,8 @@
     transition: .4s ease-in-out
   &__card:hover &__price-tag
     transform: translateX(-50px)
+
+@media ( max-width: 480px )
+  .price
+    &__card:hover &__price-tag
+      transform: translateX(-25px)

@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "imask": "^6.4.2"
+  },
+  "name": "www.skinali.tl",
+  "description": "site for the seller who manufactures kitchen panels, also called skinali",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "devDependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "scripts": {
+    "build": "webpack --mode=production",
+    "watch": "webpack --watch --mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luntic-z/skinali.git"
+  },
+  "keywords": [
+    "skinali",
+    "kitchen",
+    "panels"
+  ],
+  "author": "Alekseeva Olga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luntic-z/skinali/issues"
+  },
+  "homepage": "https://github.com/luntic-z/skinali#readme"
+}

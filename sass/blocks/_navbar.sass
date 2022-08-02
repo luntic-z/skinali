@@ -19,6 +19,8 @@
   &__menu-button
     display: flex
     margin-right: 30px
+  &__menu-button_mobile
+    display: none
   &__mobile, &__landline
     text-align: right
   &__phone
@@ -41,10 +43,17 @@
     font-size: 18px
     text-transform: uppercase
     +bold
+    white-space: nowrap
   &__description
     display: block
     font-size: 14px
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
     color: $text-color-light
+
+.none
+  display: none!important
 
 @media (max-width: 1199px)
   .navbar
@@ -62,3 +71,12 @@
   .navbar
     &__menu-button
       display: none
+    &__button
+      display: none
+    &__menu-button_mobile
+      display: flex
+
+// @media (max-width: 360px)
+//   .navbar
+//     &__menu-button_mobile
+//       display: none

@@ -135,7 +135,9 @@ a
       border: 1px solid #ddd
       background-color: lighten($bg-elements, 30%)
   &:checked + &__label::before
-    background-color: $strawberry
+    background: url('../img/interface/checkbox-checked.svg') center center
+    background-size: 80%
+    background-repeat: no-repeat
 
 @media (max-width: 991px)
   .button
@@ -149,8 +151,7 @@ a
       flex-basis: 24%
   .wrap-list_large-items
     &-item
-      max-width: 600px
-      flex-basis: 100%
+      flex-basis: 50%
     &__item:not(:last-child)
       margin-bottom: 38px
 
@@ -172,6 +173,8 @@ a
   .wrap-list_large-items
     &-item
       flex-basis: 100%
+    &-img
+      height: 144px
   .button-o
     padding: 16px 0
     flex-grow: 1
@@ -186,12 +189,18 @@ a
       flex-direction: column
       &_checkbox
         flex-direction: row
+        flex-wrap: wrap
 
 @media (max-width: 480px)
   .wrap-list
-    justify-content: space-around
+    justify-content: start
+    gap: 10px
     &-item
       flex-basis: 48%
   .wrap-list_large-items
     &-item
       flex-basis: 100%
+
+  .form
+    &__group
+      max-width: 100%

@@ -1,3 +1,4 @@
+$sizeCloseBtn: 30px
 .menu
   width: 100%
   position: fixed
@@ -12,8 +13,12 @@
     opacity: 1
     z-index: 10
   &__link
-    padding: 16px 0
     flex-grow: 1
+  &__ul
+    display: flex
+    justify-content: space-around
+  &__item
+    padding: 16px 0
     text-align: center
     text-decoration: none
     font-size: 17px
@@ -22,9 +27,6 @@
     transition: background-color .1s
     &:hover
       background-color: lighten($primary, 25%)
-  &__nav
-    display: flex
-    justify-content: space-around
   &-button
     flex-direction: column
     align-items: center
@@ -43,17 +45,47 @@
       height: 2px
       background-color: #89a9eb
       margin: 4px 0
+  &-button_mobile
+    height: 38px
+    width: 55px
+    justify-content: space-around
+    align-items: center
+    border: none
+    background-color: $bg-mobile
+    &>.menu-button__line
+      width: 70%
+      height: 1px
+      background-color: #000
+  &__button-close
+    display: none
+    position: absolute
+    width: $sizeCloseBtn
+    height: $sizeCloseBtn
+    background: none
+    border: none
+    cursor: pointer
+    background-image: url('../img/interface/menu-close.svg')
+    background-repeat: no-repeat
+    background-size: cover
+    right: 5%//container: 90%
+    top: 10px
+    z-index: 10
 
 @media (max-width: 1199px)
   .menu
-    &__link
+    &__item
       font-size: 14px
 
 @media (max-width: 991px)
   .menu
     &__nav
+      padding-right: $sizeCloseBtn
+    &__ul
       flex-direction: column
       padding: 0
-    &__link
+    &__item
       padding: 15px 0
-      text-align-last: left
+      text-align: left
+    &__button-close
+      display: flex
+      cursor: pointer

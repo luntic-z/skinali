@@ -21,8 +21,12 @@
     background-size: contain
   &__block
     @include offerBlock(80px, 32%)
+    padding-top: 40px
     width: calc(100% + 80px)
+    box-shadow: 5px 10px 15px 10px rgba(46, 174, 156, 0.2)
+    // top: -80px
   &__title
+    margin-bottom: 30px
     font-size: 25px
   &__subtitle
     display: block
@@ -54,6 +58,7 @@
     &__block
       @include offerBlock(40px)
       background-image: none
+      top: 0px
     &__title
       font-size: 22px
     &__subtitle

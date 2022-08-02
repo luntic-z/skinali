@@ -6,20 +6,9 @@
     position: relative
     height: 580px
     background: $bg-elements
-  &__menu-button
-    padding: 0
-    margin-top: 10px
-    height: 38px
-    width: 55px
+  &__menu-button_mobile
     display: none
-    justify-content: space-around
-    align-items: center
-    background-color: $bg-mobile
-    border: none
-    &>.menu-button__line
-      width: 70%
-      height: 1px
-      background-color: #000
+    margin-top: 10px
   &__block
     flex-basis: 33%
     height: 100%
@@ -39,6 +28,7 @@
     width: 100%
     height: 100%
     background: #f1f1f1 url('../img/hero/hero-bg.jpg') no-repeat center left
+    background-size: cover
   &__button
     width: 80%
     padding: 20px 0
@@ -56,6 +46,14 @@
     text-align: left
     +light
     text-transform: uppercase
+  &__consult
+    display: none!important
+    margin-top: 8px
+  &__button-o
+    max-width: 50%
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
 
 @media (max-width: 1369px)
   .hero
@@ -80,6 +78,7 @@
     &__title
       max-width: 100%
       font-size: 28px
+      text-transform: none
     &__subtitle
       font-size: 24px
       display: flex
@@ -105,27 +104,35 @@
     &__button
       width: 50%
       min-width: 180px
+      padding: 16px
     &__title
-      text-transform: none
       font-size: 23px
     &__subtitle
       font-size: 16px
     &__image-wrap
       max-width: 100%
-    &__button
-      padding: 16px
 //mobile
 @media (max-width: 569px)
   .hero
+    &__title
+      margin-bottom: 15px
     &-wrap
+      margin-top: 25px
       background-color: $bg-mobile
-    &__menu-button
-      display: flex
-      z-index: 1
     &__block
-      padding: 50px 0 0 0
+      padding: 25px 0 0 0
       z-index: 1
     &__image-wrap
-      height: 100px
+      height: 125px
     &__block
       background: transparent
+    &__button
+      padding: 13px
+    &__consult
+      display: flex!important
+
+@media (max-width: 360px)
+  .hero
+    &__menu-button_mobile
+      display: flex
+      z-index: 1

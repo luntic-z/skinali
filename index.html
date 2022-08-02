@@ -1,31 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skinali</title>
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/normalize.css">
-  <script src="js/script.js" defer></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="dist/main.js" defer></script>
 </head>
 
 <body>
   <header class="header">
     <div class="menu ">
       <div class="container">
-        <div class="menu-wrap">
-          <nav class="menu__nav">
-            <a href="#" class="menu__link">Главная</a>
-            <a href="#" class="menu__link">Продукция</a>
-            <a href="#" class="menu__link">Каталог</a>
-            <a href="#" class="menu__link">Примеры работ</a>
-            <a href="#" class="menu__link">Примерка изображений</a>
-            <a href="#" class="menu__link">Стоимость дилерам</a>
-            <a href="#" class="menu__link">О компании</a>
-          </nav>
-        </div>
+        <nav class="menu__nav">
+          <ul class="menu__ul">
+            <a href="#" class="menu__link">
+              <li class="menu__item">Главная</li>
+            </a>
+            <a href="#" class="menu__link">
+              <li class="menu__item">Продукция</li>
+            </a>
+            <a href="#" class="menu__link">
+              <li class="menu__item">Каталог</li>
+            </a>
+            <a href="#" class="menu__link">
+              <li class="menu__item">Примеры работ</li>
+            </a>
+            <a href="#" class="menu__link">
+              <li class="menu__item">Примерка изображений</li>
+            </a>
+            <a href="#" class="menu__link">
+              <li class="menu__item">Стоимость дилерам</li>
+            </a>
+            <a href="#" class="menu__link">
+              <li class="menu__item">О компании</li>
+            </a>
+          </ul>
+        </nav>
+        <button type="button" class="menu__button-close"></button>
       </div>
     </div>
     <!-- /.menu -->
@@ -52,38 +67,47 @@
             </div>
           </div>
           <button class="button-o navbar__button">Получить консультацию</button>
+          <button class="menu-button menu-button_mobile navbar__menu-button_mobile">
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+          </button>
         </div>
       </div>
       <!-- /.container -->
     </div>
     <!-- /.navbar -->
-    <section class="section hero">
-      <div class="container">
-        <button class="menu-button hero__menu-button">
-          <span class="menu-button__line"></span>
-          <span class="menu-button__line"></span>
-          <span class="menu-button__line"></span>
-        </button>
-        <div class="hero-wrap">
-          <div class="hero__block">
-            <div class="section-title section__title hero__title">
-              Гарантия минимальной цены на скинали
-            </div>
-            <span class="hero__subtitle">
-              от 3 000 р/м2
-              <button class="button hero__button button_flex">Заказать скинали</button>
-            </span>
-          </div>
-          <div class="image-wrap hero__image-wrap">
-            <div class="image hero__image"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /.hero -->
   </header>
 
-  <form action="#" class="section offer form offer__form bg-secondary">
+  <section class="section hero">
+    <div class="container">
+      <button class="menu-button menu-button_mobile hero__menu-button_mobile">
+        <span class="menu-button__line"></span>
+        <span class="menu-button__line"></span>
+        <span class="menu-button__line"></span>
+      </button>
+      <div class="hero-wrap">
+        <div class="hero__block">
+          <div class="section-title section__title hero__title">
+            Гарантия минимальной цены на скинали
+          </div>
+          <span class="hero__subtitle">
+            от 3 000 р/м2
+            <button class="button hero__button button_flex">Заказать скинали</button>
+          </span>
+          <span class="hero__subtitle hero__consult">
+            <button class="button-o hero__button hero__button-o"><span>Получить консультацию</span></button>
+          </span>
+        </div>
+        <div class="image-wrap hero__image-wrap">
+          <div class="image hero__image"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.hero -->
+
+  <form action="#" class="section offer form offer__form">
     <div class="container">
       <div class="offer-block offer__block">
         <h2 class="section-title section__title offer__title">Оставьте заявку на расчет</h2>
@@ -94,8 +118,8 @@
             <!-- /.form__label -->
             <!-- <input type="text" class="input form__input"> -->
             <select name="glassType" id="" class="input form__input select form__select">
-              <option value="" class="option form__option">С печатью</option>
-              <option value="" class="option form__option">Без печати</option>
+              <option value="print" class="option form__option">С печатью</option>
+              <option value="not" class="option form__option">Без печати</option>
               <option value="" class="option form__option"></option>
             </select>
           </div>
@@ -103,25 +127,25 @@
           <div class="form__group">
             <label for="" class="form__label">Ширина, см</label>
             <!-- /.form__label -->
-            <input type="text" class="input form__input">
+            <input type="number" name="width" class="input form__input input-width">
           </div>
           <!-- /.form__group -->
           <div class="form__group">
             <label for="" class="form__label">Высота, см</label>
             <!-- /.form__label -->
-            <input type="text" class="input form__input">
+            <input type="number" name="height" class="input form__input input-height">
           </div>
           <!-- /.form__group -->
         </div>
         <!-- /.form__row -->
         <div class="form__row form__row_checkbox">
           <div class="form__group form__checkbox">
-            <input type="checkbox" class="checkbox" id="install">
+            <input type="checkbox" name="install" class="checkbox" id="install">
             <label for="install" class="checkbox__label">Монтаж</label>
           </div>
           <!-- /.form__group -->
           <div class="form__group form__checkbox">
-            <input type="checkbox" class="checkbox" id="delivery">
+            <input type="checkbox" name="delivery" class="checkbox" id="delivery">
             <label for="delivery" class="checkbox__label">Доставка</label>
           </div>
           <!-- /.form__group -->
@@ -129,10 +153,10 @@
         <!-- /.form__row -->
         <div class="form__row">
           <div class="form__name form__group">
-            <input type="text" placeholder="Ваше имя" class="input form__input">
+            <input type="text" placeholder="Ваше имя" name="name" class="input form__input input-name">
           </div>
           <div class="form__tel form__group">
-            <input type="tel" placeholder="Ваш телефон" class="input form__input">
+            <input type="tel" placeholder="Ваш телефон" name="tel" class="input form__input">
           </div>
           <button type="submit" class="button form__submit form__group button_flex">Получить скидку</button>
         </div>
@@ -243,7 +267,7 @@
 
   <section class="section price bg-secondary">
     <div class="container">
-      <h2 class="section-title section__title">Цены и виды скинали</h2>
+      <h2 class="section-title section__title price__title">Цены и виды скинали</h2>
       <!-- /.section-title section__title -->
       <div class="wrap-list wrap-list_large-items price__wrap">
         <div class="wrap-list-item wrap-list__item wrap-list_large-items-item wrap-list_large-items__item price__card">
@@ -420,9 +444,12 @@
           мы вам пересчитаем заказ с минимальной скидкой</span>
         <!-- /.offer__subtitle -->
         <div class="form__row offer-price__row">
-          <input type="text" class="form__group offer-price__group input form__input" placeholder="Ваше имя">
-          <input type="text" class="form__group offer-price__group input form__input" placeholder="Ваш телефон">
-          <input type="text" class="form__group offer-price__group input form__input" placeholder="Ваша цена">
+          <input type="text" name="name" class="input form__group form__input offer-price__group input-name"
+            placeholder="Ваше имя">
+          <input type="tel" name="tel" class="form__group offer-price__group input form__input"
+            placeholder="Ваш телефон">
+          <input type="number" name="cost" class="input form__group form__input offer-price__group input-cost"
+            placeholder="Ваша цена">
         </div>
         <!-- /.form__row -->
         <div class="form__row offer-price__row">
